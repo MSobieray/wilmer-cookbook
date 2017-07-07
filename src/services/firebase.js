@@ -4,6 +4,4 @@ import { config } from './firebaseConfig.js'
 // Initialize Firebase
 firebase.initializeApp(config)
 
-export default {
-  database: firebase.database()
-}
+export const db = firebase.database()

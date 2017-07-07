@@ -1,9 +1,15 @@
 <template>
   <nav>
-    <router-link to="/recipes">Recipes</router-link>
-    <p v-if="name">{{name}}</p>  
-    <a v-if="name" @click.prevent="logOut" href="#">Log out</a>
-    <router-link v-else to="/sign-in">Sign In</router-link>
+    <div class="links">
+      <router-link to="/recipes" v-if="auth">Recipes</router-link>
+      <a v-if="auth" @click.prevent="logOut" href="#">Log out</a>
+      <router-link v-else to="/sign-in">Sign In</router-link>
+    </div>
+
+    <div class="user-info">
+      <p v-if="name">{{name}}</p>  
+    </div>
+    
 
   </nav>
 </template>
@@ -18,7 +24,8 @@ export default {
       userId: '',
       name: '',
       email: '',
-      user: {}
+      user: {},
+      auth: false
     }
   },
   created () {
@@ -29,6 +36,7 @@ export default {
         this.email = this.user.email
         this.photo = this.user.photoURL
         this.userId = this.user.uid
+        this.auth = true
       }
     })
   },
@@ -43,6 +51,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+nav {
+  display: flex;
+  justify-content: space-between;
+}
 a {
   color: white;
 }

@@ -9,24 +9,18 @@
 </template>
 
 <script>
+// import firebase from 'firebase'
+import { db } from '../services/firebase.js'
+// var firebaseApp = firebase.initializeApp(config)
+// var fireRecipe = firebase.initializeApp(config)
 export default {
   name: 'recipe-index',
-  data () {
-    return {
-      recipes: 'recipes'
-    }
+  created () {
+    this.$root.authRedirect()
   },
-  mounted () {
-   // console.log(this.$bindAsObject('user', myFirebaseRef.child('user')))
+  firebase: {
+    recipes: db.ref('recipes')
   }
-  // firebase: {
-  //   recipes: firebase.database.ref('recipes')
-  // }
-  // created () {
-  //   if (!this.$root.children.home.user) {
-  //     this.$router.go('/sign-in')
-  //   }
-  // }
 }
 </script>
 

@@ -18,10 +18,10 @@ export default {
   },
   mounted () {
     if (firebase.auth().currentUser) {
-      this.$route.go('/')
+      this.$route.push('/#/recipes')
     } else {
       var uiConfig = {
-        signInSuccessUrl: '/',
+        signInSuccessUrl: '/#/recipes',
         signInOptions: [
           // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
           firebase.auth.EmailAuthProvider.PROVIDER_ID
