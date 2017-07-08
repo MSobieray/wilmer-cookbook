@@ -29,7 +29,7 @@ new Vue({
         if (!user) {
           this.$router.push('/sign-in')
         } else {
-          this.auth = true
+          this.auth = user
         }
       })
     }

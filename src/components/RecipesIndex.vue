@@ -2,7 +2,8 @@
     <div>
       <div v-for="recipe in recipes">
         <div>
-          <p>{{ recipe.title }}</p>
+          <router-link :to="recipe.title.toLowerCase().replace(/\s/g, '-')">{{ recipe.title }}</router-link>
+          <p v-if="recipe.created_by">by: {{ recipe.created_by}}</p>
         </div>
       </div>
     </div>
