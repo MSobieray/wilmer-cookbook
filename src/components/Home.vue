@@ -2,20 +2,7 @@
   <div class="home">
     <h1>CookBook</h1>
     <h2 v-html="msg"></h2>
-    <!-- <div v-for="recipe in this.$root.recipes" class="image-card">
-      <div class="image-card__comment mdl-card__actions">
-        <span>{{ recipe.title }}</span>
-      </div>
-    </div> -->
-    
-    <p> Welcome Back {{name}}</p>  
-    
-    <form @submit.prevent="postRecipe">
-      <input type="text" name="title" placeholder="Recipe Title" v-model="title">
-      <textarea v-model="instructions"></textarea>
-      <input type="text" name="ingredients" placeholder="ingredients" v-model="ingredients">
-      <input type="submit" value="post recipe">
-    </form>
+    <h4> Welcome Back {{name}}</h4>  
   </div>
 </template>
 
@@ -37,14 +24,14 @@ export default {
     }
   },
   created () {
-    // let vm = this
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.user = user
-        this.name = this.user.displayName
-        this.email = this.user.email
-        this.photo = this.user.photoURL
-        this.userId = this.user.uid
+        this.name = user.displayName
+        this.email = user.email
+        this.photo = user.providerData[0].photoURL
+        this.userId = user.uid
+        console.log(this.photo)
       } else {
         this.$router.go('/sign-in')
       }

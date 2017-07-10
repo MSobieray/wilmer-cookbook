@@ -6,7 +6,8 @@
       <router-link v-else to="/sign-in">Sign In</router-link>
     </div>
 
-    <div class="user-info">
+    <div class="user-info" v-if="auth">
+      <img :src="photo" alt="">
       <p v-if="name">{{name}}</p>  
     </div>
     
@@ -34,7 +35,7 @@ export default {
         this.user = user
         this.name = this.user.displayName
         this.email = this.user.email
-        this.photo = this.user.photoURL
+        this.photo = this.user.providerData[0].photoURL
         this.userId = this.user.uid
         this.auth = true
       }
@@ -54,12 +55,28 @@ export default {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
 }
 a {
   color: white;
+  text-decoration: none;
+  border-right: 1px solid white;
+  padding: 0rem 1rem;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+.user-info img {
+  width: 50px;
+  margin: 10px;
+  border-radius: 100%;
 }
 p {
   margin: 0;
+  display: inline-block;
 }
+
 
 </style>

@@ -2,7 +2,7 @@
     <div>
       <div v-for="recipe in recipes">
         <div>
-          <router-link :to="recipe.title.toLowerCase().replace(/\s/g, '-')">{{ recipe.title }}</router-link>
+          <router-link :to="'/recipes/' + recipe.title.toLowerCase().replace(/\s/g, '-')">{{ recipe.title }}</router-link>
           <p v-if="recipe.created_by">by: {{ recipe.created_by}}</p>
         </div>
       </div>
