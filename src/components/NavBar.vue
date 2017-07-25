@@ -52,31 +52,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 70px;
-}
-a {
-  color: white;
-  text-decoration: none;
-  border-right: 1px solid white;
-  padding: 0rem 1rem;
-}
-.user-info {
-  display: flex;
-  align-items: center;
-}
-.user-info img {
-  width: 50px;
-  margin: 10px;
-  border-radius: 100%;
-}
-p {
-  margin: 0;
-  display: inline-block;
-}
-
 
 </style>

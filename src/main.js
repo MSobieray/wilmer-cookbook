@@ -5,6 +5,13 @@ import App from './App'
 import router from './router'
 import firebase from 'firebase'
 import Vuefire from 'vuefire'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+import Vuelidate from 'vuelidate'
+
+Vue.use(Vuelidate)
+
+Vue.use(Vuetify)
 
 Vue.use(Vuefire)
 

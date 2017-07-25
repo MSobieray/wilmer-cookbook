@@ -38,15 +38,15 @@ export default {
     })
   },
   methods: {
-    postRecipe () {
+    /* postRecipe () {
       this.$root.$firebaseRefs.recipes.push({
         'title': this.title,
         'instructions': this.instructions,
         'ingredients': this.ingredients,
-        'created_at': -1 * new Date().getTime()
+        'created_at': * new Date().getTime()
       })
       .then(this.title = '', this.instructions = '', this.ingredients = '')
-    }
+    } */
   }
 
 }
@@ -54,21 +54,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-h1, h2 {
-  font-weight: normal;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #35495E;
-}
 </style>
