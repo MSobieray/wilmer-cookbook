@@ -49,10 +49,11 @@
 
       <v-toolbar fixed class="green darken-1" dark>
         <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
-        <v-toolbar-title>Wilmer CookBook</v-toolbar-title>
+        <v-toolbar-title>Family Eats</v-toolbar-title>
+        <img src="./assets/white-cookbook-logo.svg" alt="">
       </v-toolbar>
       <main>
-        <img src="./assets/logo.png" alt="Vue.js PWA">
+        <img src="./assets/green-cookbook-logo.svg" alt="Vue.js PWA" class="home-logo">
         <v-container>
           <router-view></router-view>
         </v-container>
@@ -109,6 +110,9 @@ export default {
 main {
   text-align: center;
   margin-top: 40px;
+}
+.home-logo {
+  width: 200px;
 }
 /*#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

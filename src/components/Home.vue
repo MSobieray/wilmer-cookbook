@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>CookBook</h1>
+    <h1>Family Eats</h1>
     <h2 v-html="msg"></h2>
     <h4> Welcome Back {{name}}</h4>  
   </div>
