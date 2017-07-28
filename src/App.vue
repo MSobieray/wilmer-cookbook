@@ -47,13 +47,12 @@
         </v-toolbar>
       </v-navigation-drawer>
 
-      <v-toolbar fixed class="green darken-1" dark>
+      <v-toolbar fixed class="cyan lighten-1" dark>
         <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>Family Eats</v-toolbar-title>
-        <img src="./assets/white-cookbook-logo.svg" alt="">
       </v-toolbar>
       <main>
-        <img src="./assets/green-cookbook-logo.svg" alt="Vue.js PWA" class="home-logo">
+        <img src="./assets/cookbook-logo.svg" alt="Vue.js PWA" class="home-logo">
         <v-container>
           <router-view></router-view>
         </v-container>
@@ -112,7 +111,7 @@ main {
   margin-top: 40px;
 }
 .home-logo {
-  width: 200px;
+  max-width: 700px;
 }
 /*#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

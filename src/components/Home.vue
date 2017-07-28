@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <h1>Family Eats</h1>
-    <h2 v-html="msg"></h2>
-    <h4> Welcome Back {{name}}</h4>  
+    <h2> Welcome {{name}}</h2>  
   </div>
 </template>
 
@@ -12,7 +10,6 @@ export default {
   name: 'home',
   data () {
     return {
-      msg: '&#128293; Welcome Fam! &#128293;',
       title: '',
       instructions: '',
       ingredients: [],
