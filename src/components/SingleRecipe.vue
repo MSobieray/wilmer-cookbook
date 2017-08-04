@@ -7,7 +7,7 @@
             v-bind:headers="headers"
             :items="filterRecipes[0].ingredients"
             hide-actions
-            class="elevation-1"
+            class="elevation-3"
           >
           <template slot="items" scope="props">
             <td class="text-xs-left">{{ props.item.name }}</td>
@@ -19,7 +19,9 @@
     
 
     <h2 class="display-2">Instructions:</h2>
-    <p class="body">{{ filterRecipes[0].instructions }}</p>
+    <ol>
+      <li v-for="step in filterRecipes[0].instructions">{{step.step}}</li>
+    </ol>
     <v-btn primary to="/recipes">Back To All Recipes</v-btn>
   </div>
 </template>
@@ -58,10 +60,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
   table.table thead th {
-    font-weight: bolder;
-    font-size: 1rem;
+    font-size: 2rem;
   }
   h2 {
     text-align: left;
@@ -70,6 +71,14 @@ export default {
   p {
     text-align: left;
     font-size: 1rem;
+  }
+  ol {
+    margin: 2rem 0rem;
+    text-align: left;
+  }
+  ol li {
+    text-indent: 10px;
+    padding: 0.5rem 0rem;
   }
 
 </style>

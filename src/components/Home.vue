@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h2> Welcome {{name}}</h2>  
+    <h2 class="text-xs-center"> Welcome {{name}}</h2>  
   </div>
 </template>
 
