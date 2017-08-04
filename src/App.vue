@@ -54,7 +54,7 @@
       <main>
         <div class="hero">
           <h2 class="white--text display-3 mb-0 text-xs-center">Cooking With Fire</h2>
-          <h3 class="headline white--text">A collection of your friends and families favorite recipes</h3>
+          <h3 class="headline white--text">A collection of your friend's and familie's favorite recipes</h3>
           <!-- <img src="./assets/cookbook-logo.svg" alt="Cooking With Fire Logo" class="home-logo"> -->
         </div>
         <v-container>
