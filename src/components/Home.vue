@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <h2 class="text-xs-center"> Welcome {{name}}</h2>  
+    <h2 class="text-xs-left display-2 mt-5 orange--text text--darken-3"> Welcome {{name}}</h2> 
+    <p class="headline">This is a test concept to see about creating a app the allows friends and family to share their favoiite recipes amongst themselves.</p>
   </div>
 </template>
 

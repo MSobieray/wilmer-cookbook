@@ -28,7 +28,7 @@
             <p class="grey--text">{{ formatDate(recipe.created_at) }}</p>
           </v-card-title>
           <v-card-actions>
-            <v-btn flat :to="'/recipes/' + recipe.title.toLowerCase().replace(/\s/g, '-')" class="green--text">Read More</v-btn>
+            <v-btn flat :to="'/recipes/' + recipe.title.toLowerCase().replace(/\s/g, '-')" class="orange--text text--darken-3">View Recipe</v-btn>
             
           </v-card-actions>
         </v-card>

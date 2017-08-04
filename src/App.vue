@@ -43,16 +43,20 @@
 
       <v-navigation-drawer persistent light :mini-variant.sync="mini" v-model="drawer" overflow v-else>
         <v-toolbar flat class="transparent">
-          <p>please Log In</p>
+          <p>Please Signup or Login</p>
         </v-toolbar>
       </v-navigation-drawer>
 
-      <v-toolbar fixed class="cyan lighten-1" dark>
+      <v-toolbar fixed class="orange darken-3" dark>
         <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
-        <v-toolbar-title>Family Eats</v-toolbar-title>
+        <v-toolbar-title>Cooking With Fire</v-toolbar-title>
       </v-toolbar>
       <main>
-        <img src="./assets/cookbook-logo.svg" alt="Vue.js PWA" class="home-logo">
+        <div class="hero">
+          <h2 class="white--text display-3 mb-0 text-xs-center">Cooking With Fire</h2>
+          <h3 class="headline white--text">A collection of your friends and families favorite recipes</h3>
+          <!-- <img src="./assets/cookbook-logo.svg" alt="Cooking With Fire Logo" class="home-logo"> -->
+        </div>
         <v-container>
           <router-view></router-view>
         </v-container>
@@ -108,36 +112,14 @@ export default {
 <style scoped>
 main {
   text-align: center;
-  margin-top: 40px;
 }
 .home-logo {
   max-width: 700px;
 }
-/*#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+.hero {
+  background-image: url(../static/img/hero.jpg);
+  background-position: top center;
+  background-size: cover;
+  padding: 10vw;
 }
-
-
-
-header {
-  margin: 0;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-  min-height: 70px;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
-}*/
 </style>

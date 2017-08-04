@@ -1,8 +1,8 @@
 {
-  "name": "wilmer-cookbook",
+  "name": "family-eats",
   "version": "1.0.0",
   "description": "A Family Cookbook",
-  "author": "Matt Sobieray <matts@thefirmgraphics.com>",
+  "author": "Matt Sobieray <matts@hyfyn.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
