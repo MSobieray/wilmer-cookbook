@@ -2,7 +2,7 @@
   <div class="home">
     <h2 class="text-xs-center display-2 mt-5 orange--text text--darken-3">{{name}}</h2>
     <h3 class="text-xs-center display-1 mt-0">Welcome To Cooking With Fire</h3> 
-    <p class="headline">This is a test concept to see about creating an app that allows friends and family to share their favorite recipes amongst themselves.</p>
+    <p class="headline text-xs-center">This is a test concept to see about creating an app that allows friends and family to share their favorite recipes amongst themselves.</p>
     <v-btn primary to="/recipes" class="orange darken-3">Recipes</v-btn>
     <v-btn primary to="/post-recipe" class="orange darken-3">Add A Recipe</v-btn>
   </div>
