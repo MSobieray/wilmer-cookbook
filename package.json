@@ -1,7 +1,7 @@
 {
-  "name": "family-eats",
+  "name": "cooking-with-fire",
   "version": "1.0.0",
-  "description": "A Family Cookbook",
+  "description": "A Cookbook PWA",
   "author": "Matt Sobieray <matts@hyfyn.com>",
   "private": true,
   "scripts": {
