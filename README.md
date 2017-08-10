@@ -1,6 +1,6 @@
-# wilmer-cookbook
+# Cooking With Fire
 
-> A Family Cookbook
+> A Cookbook App
 
 ## Build Setup
 

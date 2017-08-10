@@ -1,13 +1,13 @@
 <template>
   <div v-cloak>
-    <h1 class="display-3">{{ filterRecipes[0].title }}</h1>
+    <h1 class="display-3 mb-5 mt-5 orange--text text--darken-3 text-xs-left">{{ filterRecipes[0].title }}</h1>
     <v-layout>
       <v-flex>
         <v-data-table
             v-bind:headers="headers"
             :items="filterRecipes[0].ingredients"
             hide-actions
-            class="elevation-1"
+            class="elevation-3"
           >
           <template slot="items" scope="props">
             <td class="text-xs-left">{{ props.item.name }}</td>
@@ -18,9 +18,11 @@
     </v-layout>
     
 
-    <h2 class="display-2">Instructions:</h2>
-    <p class="body">{{ filterRecipes[0].instructions }}</p>
-    <v-btn primary to="/recipes">Back To All Recipes</v-btn>
+    <h2 class="display-2 orange--text text--darken-3">Instructions:</h2>
+    <ol>
+      <li v-for="step in filterRecipes[0].instructions">{{step.step}}</li>
+    </ol>
+    <v-btn primary to="/recipes" class="orange darken-3">Back To All Recipes</v-btn>
   </div>
 </template>
 
@@ -58,10 +60,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
   table.table thead th {
-    font-weight: bolder;
-    font-size: 1rem;
+    font-size: 2rem;
   }
   h2 {
     text-align: left;
@@ -70,6 +71,14 @@ export default {
   p {
     text-align: left;
     font-size: 1rem;
+  }
+  ol {
+    margin: 2rem 0rem;
+    text-align: left;
+  }
+  ol li {
+    text-indent: 10px;
+    padding: 0.5rem 0rem;
   }
 
 </style>
